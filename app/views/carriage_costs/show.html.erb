@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @carriage_cost %>
+
+<div>
+  <%= link_to "Edit this carriage cost", edit_carriage_cost_path(@carriage_cost) %> |
+  <%= link_to "Back to carriage costs", carriage_costs_path %>
+
+  <%= button_to "Destroy this carriage cost", @carriage_cost, method: :delete %>
+</div>

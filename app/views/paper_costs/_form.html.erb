@@ -1,0 +1,97 @@
+<%= form_with(model: paper_cost) do |form| %>
+  <% if paper_cost.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(paper_cost.errors.count, "error") %> prohibited this paper_cost from being saved:</h2>
+
+      <ul>
+        <% paper_cost.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :rims_w_w, style: "display: block" %>
+    <%= form.text_field :rims_w_w %>
+  </div>
+
+  <div>
+    <%= form.label :waste_print_plate, style: "display: block" %>
+    <%= form.text_field :waste_print_plate %>
+  </div>
+
+  <div>
+    <%= form.label :rims_for_waste, style: "display: block" %>
+    <%= form.text_field :rims_for_waste %>
+  </div>
+
+  <div>
+    <%= form.label :rims_required, style: "display: block" %>
+    <%= form.text_field :rims_required %>
+  </div>
+
+  <div>
+    <%= form.label :additional_rims_for_rounding, style: "display: block" %>
+    <%= form.text_field :additional_rims_for_rounding %>
+  </div>
+
+  <div>
+    <%= form.label :total_rims_print_size, style: "display: block" %>
+    <%= form.text_field :total_rims_print_size %>
+  </div>
+
+  <div>
+    <%= form.label :divide_for_purchase_size, style: "display: block" %>
+    <%= form.text_field :divide_for_purchase_size %>
+  </div>
+
+  <div>
+    <%= form.label :total_rims_for_purchase, style: "display: block" %>
+    <%= form.text_field :total_rims_for_purchase %>
+  </div>
+
+  <div>
+    <%= form.label :paper_size_length, style: "display: block" %>
+    <%= form.text_field :paper_size_length %>
+  </div>
+
+  <div>
+    <%= form.label :paper_size_width, style: "display: block" %>
+    <%= form.text_field :paper_size_width %>
+  </div>
+
+  <div>
+    <%= form.label :paper_multiply_LxW, style: "display: block" %>
+    <%= form.text_field :paper_multiply_LxW %>
+  </div>
+
+  <div>
+    <%= form.label :paper_weight_per_kg, style: "display: block" %>
+    <%= form.text_field :paper_weight_per_kg %>
+  </div>
+
+  <div>
+    <%= form.label :formula, style: "display: block" %>
+    <%= form.text_field :formula %>
+  </div>
+
+  <div>
+    <%= form.label :paper_rate_per_kg, style: "display: block" %>
+    <%= form.text_field :paper_rate_per_kg %>
+  </div>
+
+  <div>
+    <%= form.label :rate_per_rims, style: "display: block" %>
+    <%= form.text_field :rate_per_rims %>
+  </div>
+
+  <div>
+    <%= form.label :paper_for_text_cost, style: "display: block" %>
+    <%= form.text_field :paper_for_text_cost %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

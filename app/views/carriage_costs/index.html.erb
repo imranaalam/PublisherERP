@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Carriage costs</h1>
+
+<div id="carriage_costs">
+  <% @carriage_costs.each do |carriage_cost| %>
+    <%= render carriage_cost %>
+    <p>
+      <%= link_to "Show this carriage cost", carriage_cost %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New carriage cost", new_carriage_cost_path %>

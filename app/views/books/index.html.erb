@@ -1,0 +1,24 @@
+<!-- app/views/books/index.html.erb -->
+
+<section class="section">
+  <div class="container">
+    <% if notice.present? %>
+      <p class="notification is-success"><%= notice %></p>
+    <% end %>
+
+    <h1 class="title">Books</h1>
+
+    <div id="books">
+      <% @books.each do |book| %>
+        <div class="box">
+          <%= render book %>
+          <p class="buttons">
+            <%= link_to "Show this book", book, class: "button is-info" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+    <%= link_to "New book", new_book_path, class: "button is-primary" %>
+  </div>
+</section>

@@ -1,0 +1,2 @@
+class CarriageCost < ApplicationRecord
+end

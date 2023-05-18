@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Application</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+<header>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <!-- Add your brand or logo here -->
+      <%= link_to 'Book Application', root_path, class: 'navbar-item has-text-white' %>
+    </div>
+
+    <!-- Add navigation items here -->
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <!-- This link is just an example -->
+        <%= link_to 'Books', books_path, class: 'navbar-item has-text-white' %>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="container">
+    <%= yield %>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

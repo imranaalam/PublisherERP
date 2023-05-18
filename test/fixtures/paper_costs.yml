@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rims_w_w: 9.99
+  waste_print_plate: 9.99
+  rims_for_waste: 9.99
+  rims_required: 9.99
+  additional_rims_for_rounding: 9.99
+  total_rims_print_size: 9.99
+  divide_for_purchase_size: 9.99
+  total_rims_for_purchase: 9.99
+  paper_size_length: 9.99
+  paper_size_width: 9.99
+  paper_multiply_LxW: 9.99
+  paper_weight_per_kg: 9.99
+  formula: 9.99
+  paper_rate_per_kg: 9.99
+  rate_per_rims: 9.99
+  paper_for_text_cost: 9.99
+
+two:
+  rims_w_w: 9.99
+  waste_print_plate: 9.99
+  rims_for_waste: 9.99
+  rims_required: 9.99
+  additional_rims_for_rounding: 9.99
+  total_rims_print_size: 9.99
+  divide_for_purchase_size: 9.99
+  total_rims_for_purchase: 9.99
+  paper_size_length: 9.99
+  paper_size_width: 9.99
+  paper_multiply_LxW: 9.99
+  paper_weight_per_kg: 9.99
+  formula: 9.99
+  paper_rate_per_kg: 9.99
+  rate_per_rims: 9.99
+  paper_for_text_cost: 9.99

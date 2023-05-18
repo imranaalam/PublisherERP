@@ -1,0 +1,68 @@
+<%= form_with(model: @book) do |form| %>
+  <% if @book.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+      <ul>
+        <% @book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, class: 'label' %>
+    <div class="control">
+      <%= form.text_field :title, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :publication_year, class: 'label' %>
+    <div class="control">
+      <%= form.number_field :publication_year, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :author_ids, class: 'label' %>
+    <div class="control">
+      <%= form.text_field :author_search, id: 'author_search', class: 'input', placeholder: 'Search for authors...' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div id="author_list">
+        <% Author.all.each do |author| %>
+          <label>
+            <%= check_box_tag 'book[author_ids][]', author.id, @book.author_ids.include?(author.id), class: 'author-checkbox' %>
+            <%= author.name %>
+          </label>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= form.submit 'Update', class: 'button is-primary' %>
+    </div>
+  </div>
+<% end %>
+
+<script>
+    $(document).ready(function() {
+        $('#author_search').on('input', function() {
+            var input = $(this).val().toLowerCase();
+            $('.author-checkbox').each(function() {
+                var authorName = $(this).next('span').text().toLowerCase();
+                if (authorName.includes(input)) {
+                    $(this).parent().show();
+                } else {
+                    $(this).parent().hide();
+                }
+            });
+        });
+    });
+</script>

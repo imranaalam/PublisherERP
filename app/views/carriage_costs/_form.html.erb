@@ -1,0 +1,27 @@
+<%= form_with(model: carriage_cost) do |form| %>
+  <% if carriage_cost.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(carriage_cost.errors.count, "error") %> prohibited this carriage_cost from being saved:</h2>
+
+      <ul>
+        <% carriage_cost.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :carriage_rate_per_rim, style: "display: block" %>
+    <%= form.text_field :carriage_rate_per_rim %>
+  </div>
+
+  <div>
+    <%= form.label :carriage_for_paper, style: "display: block" %>
+    <%= form.text_field :carriage_for_paper %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

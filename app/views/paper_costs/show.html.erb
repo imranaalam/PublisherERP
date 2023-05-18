@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @paper_cost %>
+
+<div>
+  <%= link_to "Edit this paper cost", edit_paper_cost_path(@paper_cost) %> |
+  <%= link_to "Back to paper costs", paper_costs_path %>
+
+  <%= button_to "Destroy this paper cost", @paper_cost, method: :delete %>
+</div>

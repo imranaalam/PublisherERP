@@ -1,0 +1,24 @@
+<% if notice %>
+  <div class="notification is-success">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="box">
+  <h1 class="title"><%= @book.title %></h1>
+
+  <div class="content">
+    <p><strong>Authors:</strong></p>
+    <ul>
+      <% @book.authors.each do |author| %>
+        <li><%= author.name %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <p class="buttons">
+    <%= link_to "Edit this book", edit_book_path(@book), class: "button is-warning" %>
+    <%= link_to "Back to books", books_path, class: "button is-light" %>
+    <%= button_to "Destroy this book", @book, method: :delete, class: "button is-danger" %>
+  </p>
+</div>

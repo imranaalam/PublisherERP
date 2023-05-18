@@ -1,0 +1,2 @@
+class PaperCost < ApplicationRecord
+end

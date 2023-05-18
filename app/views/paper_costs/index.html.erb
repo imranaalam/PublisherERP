@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Paper costs</h1>
+
+<div id="paper_costs">
+  <% @paper_costs.each do |paper_cost| %>
+    <%= render paper_cost %>
+    <p>
+      <%= link_to "Show this paper cost", paper_cost %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New paper cost", new_paper_cost_path %>
